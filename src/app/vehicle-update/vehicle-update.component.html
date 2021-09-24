@@ -1,1 +1,28 @@
-<p>vehicle-update works!</p>
+<h3>Update Vehicle</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="submit()">
+    <div class="form-group">
+      <label>Vehicle Name</label>
+      <input type="text" class="form-control"  name="vhcName" required [(ngModel)]="vehicle.vhcName">
+    </div>
+    <div class="form-group">
+      <label>Vehicle Number</label>
+      <input type="number" class="form-control"  name="vhcNumber" required [(ngModel)]="vehicle.vhcNumber" disabled>
+    </div>
+    <div class="form-group">
+      <label>Vehicle Model</label>
+      <input type="text" class="form-control" name="vhcModel" required [(ngModel)]="vehicle.vhcModel">
+    </div>
+    <div class="form-group">
+      <label>Vehicle Status</label>
+      <input type="text" class="form-control" name="vhcStatus" required [(ngModel)]="vehicle.vhcStatus">
+    </div>
+    <div class="form-group">
+      <label>Vehicle Price</label>
+      <input type="number" class="form-control" name="vhcPrice" required [(ngModel)]="vehicle.vhcPrice" disabled>
+    </div>
+    <br/>
+    <button  type="submit" class="btn btn-success" >Submit</button>
+  </form>
+
+</div>
