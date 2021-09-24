@@ -9,6 +9,8 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './vehicle-detail/vehicle-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DriverCreateComponent } from './driver-create/driver-create.component';
+import { DriverUpdateComponent } from './driver-update/driver-update.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule } from '@angular/forms';
     VehicleCreateComponent,
     VehicleUpdateComponent,
     VehicleListComponent,
-    VehicleDetailComponent
+    VehicleDetailComponent,
+    DriverCreateComponent,
+    DriverUpdateComponent
   ],
   imports: [
     BrowserModule,

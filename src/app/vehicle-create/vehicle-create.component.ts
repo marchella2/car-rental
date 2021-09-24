@@ -11,7 +11,7 @@ import { VehicleService } from '../vehicle.service';
 export class VehicleCreateComponent implements OnInit {
   
   vhc : Vehicle = new Vehicle();
-  diSubmit = false;
+  diSubmit = true;
 
   constructor(private vs : VehicleService, private router : Router) { }
 
