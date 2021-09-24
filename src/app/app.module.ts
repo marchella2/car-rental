@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DriverCreateComponent } from './driver-create/driver-create.component';
 import { DriverUpdateComponent } from './driver-update/driver-update.component';
+import { DriverDetailComponent } from './driver-detail/driver-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DriverUpdateComponent } from './driver-update/driver-update.component';
     VehicleListComponent,
     VehicleDetailComponent,
     DriverCreateComponent,
-    DriverUpdateComponent
+    DriverUpdateComponent,
+    DriverDetailComponent
   ],
   imports: [
     BrowserModule,
