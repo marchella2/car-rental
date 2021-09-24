@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { DriverCreateComponent } from './driver-create/driver-create.component';
 import { DriverUpdateComponent } from './driver-update/driver-update.component';
 import { DriverDetailComponent } from './driver-detail/driver-detail.component';
+import { DriverListComponent } from './driver-list/driver-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DriverDetailComponent } from './driver-detail/driver-detail.component';
     VehicleDetailComponent,
     DriverCreateComponent,
     DriverUpdateComponent,
-    DriverDetailComponent
+    DriverDetailComponent,
+    DriverListComponent
   ],
   imports: [
     BrowserModule,

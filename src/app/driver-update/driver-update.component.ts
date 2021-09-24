@@ -17,7 +17,7 @@ export class DriverUpdateComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private ds : DriverService) { }
 
   back(){
-    this.router.navigate(['update']);
+    this.router.navigate(['driver']);
   }
 
   updateDriver(){

@@ -36,9 +36,9 @@ export class VehicleListComponent implements OnInit {
       data=>{
         console.log(data);
         this.reloadData();
-      }, 
+      },
       error=> console.log(error)
-    )
+    );
   }
 
   ngOnInit() {
