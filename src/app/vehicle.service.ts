@@ -16,7 +16,7 @@ export class VehicleService {
   }
 
   createVehicle(vehicle: Vehicle):Observable<any> {
-    return this.http.post(`${this.baseUrl}/product/create`, vehicle);
+    return this.http.post(`${this.baseUrl}/vehicle/create`, vehicle);
   }
 
   updateVehicle(vehicle: Vehicle):Observable<any> {

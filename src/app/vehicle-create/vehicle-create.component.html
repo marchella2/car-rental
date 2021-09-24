@@ -1,1 +1,31 @@
-<p>vehicle-create works!</p>
+<h3>Create Vehicle</h3>
+<div style="width: 400px">
+    <form (ngSubmit)="submit()">
+        <div class="form-group">
+            <label>Name : </label>
+            <input type="text" class="form-control" id="vhcName" required [(ngModel)]="vhc.vhcName" name="vhcName">
+        </div>
+        <div class="form-group">
+            <label>Number : </label>
+            <input type="text" class="form-control" id="vhcNumber" required [(ngModel)]="vhc.vhcNumber" name="vhcNumber">
+        </div>
+        <div class="form-group">
+            <label>Model : </label>
+            <input type="text" class="form-control" id="model" required [(ngModel)]="vhc.vhcModel" name="model">
+        </div>
+        <div class="form-group">
+            <label>Status : </label>
+            <input type="text" class="form-control" id="status" required [(ngModel)]="vhc.vhcStatus" name="status">
+        </div>
+        <div class="form-group">
+            <label>Price : </label>
+            <input type="text" class="form-control" id="price" required [(ngModel)]="vhc.vhcPrice" name="price">
+        </div>
+        <br/>
+        <button type="sumbit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+
+
+
