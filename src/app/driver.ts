@@ -1,6 +1,6 @@
 export class Driver {
     id: string;
-    nik: number;
+    nik: string;
     driverName:  string;
     driverPhone: string;
 }
