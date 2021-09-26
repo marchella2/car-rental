@@ -13,11 +13,7 @@ public class Customer {
     @Id
     private String id;
     private String fullName;
-    private int nik;
-    private String gender;
-    @JsonFormat(pattern="yyyy-MM-dd")
-    @Temporal(TemporalType.DATE)
-    private Date birthDate;
+    private String nik;
     private String phoneNumber;
     private String address;
 
@@ -40,28 +36,12 @@ public class Customer {
         this.fullName = fullName;
     }
 
-    public int getNik() {
+    public String getNik() {
         return nik;
     }
 
-    public void setNik(int nik) {
+    public void setNik(String nik) {
         this.nik = nik;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
     }
 
     public String getPhoneNumber() {

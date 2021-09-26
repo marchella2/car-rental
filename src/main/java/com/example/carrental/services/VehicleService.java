@@ -22,6 +22,7 @@ public class VehicleService {
     }
 
     public List<Vehicle> createVehicle(Vehicle vehicle) {
+        vehicle.setVhcStatus(true);
         vehicleRepository.save(vehicle);
         return vehicleRepository.findAll();
     }

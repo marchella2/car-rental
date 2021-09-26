@@ -13,7 +13,7 @@ public class Vehicle {
     private String vhcName;
     private int vhcNumber;
     private String vhcModel;
-    private String vhcStatus;
+    private Boolean vhcStatus;
     private String vhcPrice;
 
     public String getId() {
@@ -51,11 +51,11 @@ public class Vehicle {
         this.vhcModel = vhcModel;
     }
 
-    public String getVhcStatus() {
+    public Boolean getVhcStatus() {
         return vhcStatus;
     }
 
-    public void setVhcStatus(String vhcStatus) {
+    public void setVhcStatus(Boolean vhcStatus) {
         this.vhcStatus = vhcStatus;
     }
 

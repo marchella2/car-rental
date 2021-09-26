@@ -26,6 +26,7 @@ public class DriverService {
 
     public List<Driver> createDriver(Driver driver)
     {
+        driver.setDriverStatus(true);
         driverRepository.save(driver);
         return driverRepository.findAll();
     }
