@@ -13,6 +13,7 @@ import { DriverCreateComponent } from './driver-create/driver-create.component';
 import { DriverUpdateComponent } from './driver-update/driver-update.component';
 import { DriverDetailComponent } from './driver-detail/driver-detail.component';
 import { DriverListComponent } from './driver-list/driver-list.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DriverListComponent } from './driver-list/driver-list.component';
     DriverCreateComponent,
     DriverUpdateComponent,
     DriverDetailComponent,
-    DriverListComponent
+    DriverListComponent,
+    CustomerDetailComponent
   ],
   imports: [
     BrowserModule,
