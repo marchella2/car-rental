@@ -10,19 +10,23 @@ import { DriverDetailComponent } from './driver-detail/driver-detail.component';
 import { DriverListComponent } from './driver-list/driver-list.component';
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './customer-update/customer-update.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'vehicle', pathMatch: 'full'},
   {path: 'vehicle', component: VehicleListComponent},
   {path: 'driver', component: DriverListComponent},
-  {path: 'add', component: VehicleCreateComponent},
+  {path: 'customer', component: CustomerListComponent},
+  {path: 'addVehicle', component: VehicleCreateComponent},
   {path: 'addDriver', component: DriverCreateComponent},
+  {path: 'addCustomer', component:CustomerCreateComponent},
+  {path: 'updateVehicle/:id', component: VehicleUpdateComponent},
+  {path: 'detailVehicle/:id', component: VehicleDetailComponent},
   {path: 'updateDriver/:id', component: DriverUpdateComponent},
   {path: 'detailDriver/:id', component: DriverDetailComponent},
-  {path: 'update/:id', component: VehicleUpdateComponent},
-  {path: 'detail/:id', component: VehicleDetailComponent},
-  {path: 'addCustomer', component:CustomerCreateComponent},
-  {path: 'updateCustomer/:id', component:CustomerUpdateComponent}
+  {path: 'updateCustomer/:id', component:CustomerUpdateComponent},
+  {path: 'detailCustomer/:id', component: CustomerDetailComponent}
 ];
 
 @NgModule({

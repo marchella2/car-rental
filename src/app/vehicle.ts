@@ -3,6 +3,6 @@ export class Vehicle{
   vhcName: string;
   vhcNumber: number;
   vhcModel: string;
-  vhcStatus: string;
+  vhcStatus: boolean;
   vhcPrice: string;
 }

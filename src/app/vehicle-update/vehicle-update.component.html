@@ -14,8 +14,7 @@
       <input type="text" class="form-control" name="vhcModel" required [(ngModel)]="vehicle.vhcModel">
     </div>
     <div class="form-group">
-      <label>Vehicle Status</label>
-      <input type="text" class="form-control" name="vhcStatus" required [(ngModel)]="vehicle.vhcStatus">
+      <input type="hidden" value="true" class="form-control" id="status" required [(ngModel)]="vehicle.vhcStatus" name="status">
     </div>
     <div class="form-group">
       <label>Vehicle Price</label>

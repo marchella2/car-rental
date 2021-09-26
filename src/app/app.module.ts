@@ -13,12 +13,10 @@ import { DriverCreateComponent } from './driver-create/driver-create.component';
 import { DriverUpdateComponent } from './driver-update/driver-update.component';
 import { DriverDetailComponent } from './driver-detail/driver-detail.component';
 import { DriverListComponent } from './driver-list/driver-list.component';
-<<<<<<< HEAD
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
-=======
+import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './customer-update/customer-update.component';
->>>>>>> 3c256674d73e48cf8b1d3b622258e4464c8bc556
 
 @NgModule({
   declarations: [
@@ -31,12 +29,10 @@ import { CustomerUpdateComponent } from './customer-update/customer-update.compo
     DriverUpdateComponent,
     DriverDetailComponent,
     DriverListComponent,
-<<<<<<< HEAD
-    CustomerDetailComponent
-=======
+    CustomerDetailComponent,
+    CustomerListComponent,
     CustomerCreateComponent,
     CustomerUpdateComponent
->>>>>>> 3c256674d73e48cf8b1d3b622258e4464c8bc556
   ],
   imports: [
     BrowserModule,
