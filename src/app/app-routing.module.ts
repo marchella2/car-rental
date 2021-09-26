@@ -8,6 +8,8 @@ import { DriverCreateComponent } from './driver-create/driver-create.component';
 import { DriverUpdateComponent } from './driver-update/driver-update.component';
 import { DriverDetailComponent } from './driver-detail/driver-detail.component';
 import { DriverListComponent } from './driver-list/driver-list.component';
+import { CustomerCreateComponent } from './customer-create/customer-create.component';
+import { CustomerUpdateComponent } from './customer-update/customer-update.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'vehicle', pathMatch: 'full'},
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'updateDriver/:id', component: DriverUpdateComponent},
   {path: 'detailDriver/:id', component: DriverDetailComponent},
   {path: 'update/:id', component: VehicleUpdateComponent},
-  {path: 'detail/:id', component: VehicleDetailComponent}
+  {path: 'detail/:id', component: VehicleDetailComponent},
+  {path: 'addCustomer', component:CustomerCreateComponent},
+  {path: 'updateCustomer/:id', component:CustomerUpdateComponent}
 ];
 
 @NgModule({
