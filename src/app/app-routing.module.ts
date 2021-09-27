@@ -10,6 +10,7 @@ import { DriverDetailComponent } from './driver-detail/driver-detail.component';
 import { DriverListComponent } from './driver-list/driver-list.component';
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './customer-update/customer-update.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'vehicle', pathMatch: 'full'},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'update/:id', component: VehicleUpdateComponent},
   {path: 'detail/:id', component: VehicleDetailComponent},
   {path: 'addCustomer', component:CustomerCreateComponent},
-  {path: 'updateCustomer/:id', component:CustomerUpdateComponent}
+  {path: 'updateCustomer/:id', component:CustomerUpdateComponent},
+  {path: 'detailCustomer/:id', component:CustomerDetailComponent}
 ];
 
 @NgModule({
