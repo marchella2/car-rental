@@ -13,9 +13,10 @@ import { DriverCreateComponent } from './driver-create/driver-create.component';
 import { DriverUpdateComponent } from './driver-update/driver-update.component';
 import { DriverDetailComponent } from './driver-detail/driver-detail.component';
 import { DriverListComponent } from './driver-list/driver-list.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './customer-update/customer-update.component';
-import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,10 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
     DriverUpdateComponent,
     DriverDetailComponent,
     DriverListComponent,
+    CustomerDetailComponent,
+    CustomerListComponent,
     CustomerCreateComponent,
-    CustomerUpdateComponent,
-    CustomerDetailComponent
+    CustomerUpdateComponent
   ],
   imports: [
     BrowserModule,

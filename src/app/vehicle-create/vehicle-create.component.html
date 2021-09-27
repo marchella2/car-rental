@@ -14,15 +14,14 @@
             <input type="text" class="form-control" id="model" required [(ngModel)]="vhc.vhcModel" name="model">
         </div>
         <div class="form-group">
-            <label>Status : </label>
-            <input type="text" class="form-control" id="status" required [(ngModel)]="vhc.vhcStatus" name="status">
+            <input type="hidden" value="true" class="form-control" id="status" required [(ngModel)]="vhc.vhcStatus" name="status">
         </div>
         <div class="form-group">
             <label>Price : </label>
             <input type="text" class="form-control" id="price" required [(ngModel)]="vhc.vhcPrice" name="price">
         </div>
         <br/>
-        <button type="sumbit" class="btn btn-success">Submit</button>
+        <button type="sumbit" class="btn btn-success">Save</button>
     </form>
 </div>
 

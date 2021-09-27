@@ -3,4 +3,5 @@ export class Driver {
     nik: string;
     driverName:  string;
     driverPhone: string;
+    driverStatus: boolean;
 }

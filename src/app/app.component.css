@@ -1,0 +1,33 @@
+hr {
+    color: white;
+    width: 135px;
+    position: relative;
+    left: 10px;
+}
+
+.sidenav-menu {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #919bff ;
+    background-image: linear-gradient(#919bff,#133a94);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.sidenav-menu, a {
+    color: white;
+}
+
+.sidenav-menu-heading, a {
+    color: white;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}

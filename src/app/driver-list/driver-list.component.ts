@@ -20,6 +20,11 @@ export class DriverListComponent implements OnInit {
     this.drivers = this.driverService.getDriverList();
   }
 
+  goToCreate(){
+    this.router.navigate(['addDriver']);
+  }
+
+
   goToDetail(id: String)
   {
     this.router.navigate(['detailDriver', id]);

@@ -7,7 +7,6 @@ import { Customer } from './customer';
   providedIn: 'root'
 })
 export class CustomerService {
-
   private baseUrl = 'http://localhost:8080'
   constructor(private http: HttpClient) { }
 

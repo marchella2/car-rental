@@ -41,7 +41,7 @@ export class CustomerUpdateComponent implements OnInit {
 
     this.cs.findCustomer(this.id).subscribe(
       data=>{
-        console.log(data);
+        this.customer = data;
       }, error=> console.log(error)
     );
 

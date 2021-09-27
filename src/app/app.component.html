@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <ul class="navbar-nav">
     <li  class="nav-item">
       <a routerLink="vehicle" class="nav-link" routerLinkActive ="active">Vehicle List</a>
     </li>
     <li  class="nav-item">
-      <a routerLink="add" class="nav-link" routerLinkActive ="active">Add Vehicle</a>
+      <a routerLink="addVehicle" class="nav-link" routerLinkActive ="active">Add Vehicle</a>
     </li>
     <li  class="nav-item">
       <a routerLink="driver" class="nav-link" routerLinkActive ="active">Driver List</a>
@@ -12,13 +12,36 @@
     <li  class="nav-item">
       <a routerLink="addDriver" class="nav-link" routerLinkActive ="active">Add Driver</a>
     </li>
+    <li class="nav-item">
+      <a routerLink="customer" class="nav-link" routerLinkActive="active">Customer List</a>
+    </li>
     <li  class="nav-item">
       <a routerLink="addCustomer" class="nav-link" routerLinkActive ="active">Add Customer</a>
     </li>
-    
   </ul>
+</nav> -->
+<nav class="navbar navbar-expand navbar-dark">
+<div class="sidenav-menu">
+  <a class="navbar-brand ps-3" href="#">CAR RENTAL</a>
+  <hr>
+  <div class="sidenav-content">
+      <div class="sidenav-menu-heading"></div>
+      <a class="nav-link" href="#">Dashboard</a>
+      <hr>
+      <div class="sidenav-menu-heading, text-white-50" style="padding-left:15px; padding-bottom:5px;"><small>Transaction</small></div>
+      <a class="nav-link" href="#">Rental</a>
+      <hr>
+      <div class="sidenav-menu-heading, text-white-50" style="padding-left:15px;padding-bottom:5px;"><small>Data Master</small></div>
+      <a routerLink="vehicle" class="nav-link" href="vehicle-list.component.html">Car Section</a>
+      <a routerLink="driver" class="nav-link" href="driver-list.component.html">Driver Section</a>
+      <a routerLink="customer" class="nav-link" href="customer-list.component.html">Customer Section</a>
+      <hr>
+  </div>
+</div>
 </nav>
-<div class="container">
+
+
+<div class="container" style="padding-left: 150px;">
   <br>
   <h2 style="text-align: center;">{{ title }}</h2>
   <hr/>
@@ -30,7 +53,8 @@
 </div>
 
 <footer class="footer">
-  <div class="container">
-    <span>Hak Cipta Bebas lho @2021</span>
+  <div class="container" style="padding-left: 150px;">
+    <br>
+    <span>Team 5 JDT @2021</span>
   </div>
 </footer>

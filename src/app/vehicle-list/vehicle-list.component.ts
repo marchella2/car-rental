@@ -20,14 +20,19 @@ export class VehicleListComponent implements OnInit {
     this.vehicles = this.vehicleService.getVehicleList();
   }
 
+
+  goToCreate(){
+    this.router.navigate(['addVehicle']);
+  }
+
   goToDetail(id: String)
   {
-    this.router.navigate(['detail', id]);
+    this.router.navigate(['detailVehicle', id]);
   }
 
   goToUpdate(id: String)
   {
-    this.router.navigate(['update', id]);
+    this.router.navigate(['updateVehicle', id]);
   }
 
   deleteVehicle(id: String)

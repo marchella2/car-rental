@@ -18,6 +18,7 @@ export class VehicleCreateComponent implements OnInit {
   ngOnInit() {
   }
 
+
   back(){
     this.router.navigate(['vehicle']);
   }
