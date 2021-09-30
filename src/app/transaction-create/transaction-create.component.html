@@ -1,0 +1,29 @@
+<h3>Transaction</h3>
+<div style="width: 400;">
+    <form (ngSubmit)="submit()">
+        <div class="form-group">
+            <label>Customer</label>
+            <select class="form-control" {(ngModel)}="transaction.custId" name="custId" required>
+                <option *ngFor="let c of customer" [ngValue]="c.id">{{c.fullName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Driver</label>
+            <select class="form-control" {(ngModel)}="transaction.driverId" name="driverId" required>
+                <option *ngFor="let d of driver" [ngValue]="d.id">{{d.driverName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Driver</label>
+            <select class="form-control" {(ngModel)}="transaction.vehicleId" name="vehicleId" required>
+                <option *ngFor="let v of vehicle" [ngValue]="v.id">{{v.vhcModel+"&nbsp;&nbsp;"+v.vhcName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Date Return</label>
+            <input type="Date" class="form-control" required [(ngModel)]="transaction.dateReturn" name="date">
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-success">Start Rent</button>
+    </form>
+</div>

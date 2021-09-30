@@ -17,6 +17,9 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerCreateComponent } from './customer-create/customer-create.component';
 import { CustomerUpdateComponent } from './customer-update/customer-update.component';
+import { TransactionCreateComponent } from './transaction-create/transaction-create.component';
+import { TransactionListComponent } from './transaction-list/transaction-list.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { CustomerUpdateComponent } from './customer-update/customer-update.compo
     CustomerDetailComponent,
     CustomerListComponent,
     CustomerCreateComponent,
-    CustomerUpdateComponent
+    CustomerUpdateComponent,
+    TransactionCreateComponent,
+    TransactionListComponent,
+   
   ],
   imports: [
     BrowserModule,
