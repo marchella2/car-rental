@@ -14,7 +14,7 @@ public class Vehicle {
     private int vhcNumber;
     private String vhcModel;
     private Boolean vhcStatus;
-    private String vhcPrice;
+    private Long vhcPrice;
 
     public String getId() {
         if (id == null || id.equals("")){
@@ -59,11 +59,11 @@ public class Vehicle {
         this.vhcStatus = vhcStatus;
     }
 
-    public String getVhcPrice() {
+    public Long getVhcPrice() {
         return vhcPrice;
     }
 
-    public void setVhcPrice(String vhcPrice) {
+    public void setVhcPrice(Long vhcPrice) {
         this.vhcPrice = vhcPrice;
     }
 }

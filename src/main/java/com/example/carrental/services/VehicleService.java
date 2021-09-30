@@ -27,6 +27,11 @@ public class VehicleService {
         return vehicleRepository.findAll();
     }
 
+    public List<Vehicle> updateVehicle(Vehicle vhc){
+        vehicleRepository.save(vhc);
+        return vehicleRepository.findAll();
+    }
+
     public Optional<Vehicle> findVehicle(String id){
         return vehicleRepository.findById(id);
     }
@@ -35,8 +40,4 @@ public class VehicleService {
         vehicleRepository.deleteById(id);
     }
 
-    public List<Vehicle> updateVehicle(Vehicle vhc){
-        vehicleRepository.save(vhc);
-        return vehicleRepository.findAll();
-    }
 }

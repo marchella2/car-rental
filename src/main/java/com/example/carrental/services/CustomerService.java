@@ -13,13 +13,11 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
-    public CustomerService(CustomerRepository cstRepo)
-    {
+    public CustomerService(CustomerRepository cstRepo) {
         this.customerRepository = cstRepo;
     }
 
-    public List<Customer> getAllCustomer()
-    {
+    public List<Customer> getAllCustomer() {
         return customerRepository.findAll();
     }
 
@@ -28,8 +26,12 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    public Optional<Customer> findCustomer(String id)
-    {
+    public List<Customer> updateCustomer(Customer customer) {
+        customerRepository.save(customer);
+        return customerRepository.findAll();
+    }
+
+    public Optional<Customer> findCustomer(String id) {
         return customerRepository.findById(id);
     }
 
@@ -37,9 +39,4 @@ public class CustomerService {
         customerRepository.deleteById(id);
     }
 
-    public List<Customer> updateCustomer(Customer customer)
-    {
-        customerRepository.save(customer);
-        return customerRepository.findAll();
-    }
 }

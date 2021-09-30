@@ -1,12 +1,14 @@
 package com.example.carrental.models;
 
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
-@Table(name = "trc_transaction")
+@Table(name = "trx_transaction")
 public class RentalTrans {
 
     @Id
@@ -14,15 +16,18 @@ public class RentalTrans {
     private String custId;
     private String driverId;
     private String vehicleId;
-    @JsonFormat(pattern="yyyy-MM-dd")
-    @Temporal(TemporalType.DATE)
-    private Date dateRent;
-    @JsonFormat(pattern="yyyy-MM-dd")
-    @Temporal(TemporalType.DATE)
-    private Date dateReturn;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dateRent;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dateReturn;
     private Boolean rentStatus;
+    private String status;
+    private Long totalPrice;
 
     public String getId() {
+        if (id == null || id.equals("")) {
+            id = UUID.randomUUID().toString();
+        }
         return id;
     }
 
@@ -54,19 +59,19 @@ public class RentalTrans {
         this.vehicleId = vehicleId;
     }
 
-    public Date getDateRent() {
+    public LocalDate getDateRent() {
         return dateRent;
     }
 
-    public void setDateRent(Date dateRent) {
+    public void setDateRent(LocalDate dateRent) {
         this.dateRent = dateRent;
     }
 
-    public Date getDateReturn() {
+    public LocalDate getDateReturn() {
         return dateReturn;
     }
 
-    public void setDateReturn(Date dateReturn) {
+    public void setDateReturn(LocalDate dateReturn) {
         this.dateReturn = dateReturn;
     }
 
@@ -76,5 +81,21 @@ public class RentalTrans {
 
     public void setRentStatus(Boolean rentStatus) {
         this.rentStatus = rentStatus;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Long getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(Long totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

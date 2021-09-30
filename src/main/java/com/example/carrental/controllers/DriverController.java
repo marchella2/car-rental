@@ -22,29 +22,25 @@ public class DriverController {
     }
 
     @GetMapping("/get")
-    public ResponseEntity<List<Driver>> showDataDriver()
-    {
+    public ResponseEntity<List<Driver>> showDataDriver() {
         List<Driver> driverList = driverService.getAllDriver();
         return new ResponseEntity<>(driverList, HttpStatus.OK);
     }
 
     @PostMapping("/create")
-    public ResponseEntity<List<Driver>> createDriver(@RequestBody Driver driver)
-    {
-        List<Driver> driverList = driverService.updateDriver(driver);
+    public ResponseEntity<List<Driver>> createDriver(@RequestBody Driver driver) {
+        List<Driver> driverList = driverService.createDriver(driver);
         return new ResponseEntity<>(driverList, HttpStatus.OK);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<List<Driver>> updateDriver(@RequestBody Driver driver)
-    {
+    public ResponseEntity<List<Driver>> updateDriver(@RequestBody Driver driver) {
         List<Driver> driverList = driverService.updateDriver(driver);
         return new ResponseEntity<>(driverList, HttpStatus.OK);
     }
 
     @GetMapping("/find/{id}")
-    public ResponseEntity<Optional<Driver>> findDriver(@PathVariable("id") String id)
-    {
+    public ResponseEntity<Optional<Driver>> findDriver(@PathVariable("id") String id) {
         Optional<Driver> driverList = driverService.findDriver(id);
         return new ResponseEntity<>(driverList, HttpStatus.OK);
     }

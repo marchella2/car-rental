@@ -19,31 +19,27 @@ public class DriverService {
         this.driverRepository = driverRepo;
     }
 
-    public List<Driver> getAllDriver()
-    {
+    public List<Driver> getAllDriver() {
         return driverRepository.findAll();
     }
 
-    public List<Driver> createDriver(Driver driver)
-    {
+    public List<Driver> createDriver(Driver driver) {
         driver.setDriverStatus(true);
         driverRepository.save(driver);
         return driverRepository.findAll();
     }
 
-    public Optional<Driver> findDriver(String id)
-    {
-        return driverRepository.findById(id);
-    }
-
-    public void deleteDriver(String id)
-    {
-        driverRepository.deleteById(id);
-    }
-
-    public List<Driver> updateDriver(Driver driver)
-    {
+    public List<Driver> updateDriver(Driver driver) {
         driverRepository.save(driver);
         return driverRepository.findAll();
     }
+
+    public Optional<Driver> findDriver(String id) {
+        return driverRepository.findById(id);
+    }
+
+    public void deleteDriver(String id) {
+        driverRepository.deleteById(id);
+    }
+
 }

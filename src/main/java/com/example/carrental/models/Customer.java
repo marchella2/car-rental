@@ -1,10 +1,6 @@
 package com.example.carrental.models;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
-import java.util.Date;
 import java.util.UUID;
 
 @Entity
@@ -14,6 +10,7 @@ public class Customer {
     private String id;
     private String fullName;
     private String nik;
+    private String gender;
     private String phoneNumber;
     private String address;
 
@@ -42,6 +39,14 @@ public class Customer {
 
     public void setNik(String nik) {
         this.nik = nik;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getPhoneNumber() {
