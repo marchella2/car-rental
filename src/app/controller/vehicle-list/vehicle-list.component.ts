@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Vehicle } from '../vehicle';
-import { VehicleService } from '../vehicle.service';
+import { Vehicle } from 'src/app/entity/vehicle';
+import { VehicleService } from 'src/app/services/vehicle.service';
 
 @Component({
   selector: 'app-vehicle-list',

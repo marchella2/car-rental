@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { VehicleCreateComponent } from './vehicle-create/vehicle-create.component';
-import { VehicleUpdateComponent } from './vehicle-update/vehicle-update.component';
-import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
-import { VehicleDetailComponent } from './vehicle-detail/vehicle-detail.component';
-import { DriverCreateComponent } from './driver-create/driver-create.component';
-import { DriverUpdateComponent } from './driver-update/driver-update.component';
-import { DriverDetailComponent } from './driver-detail/driver-detail.component';
-import { DriverListComponent } from './driver-list/driver-list.component';
-import { CustomerCreateComponent } from './customer-create/customer-create.component';
-import { CustomerUpdateComponent } from './customer-update/customer-update.component';
-import { CustomerListComponent } from './customer-list/customer-list.component';
-import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { VehicleCreateComponent } from './controller/vehicle-create/vehicle-create.component';
+import { VehicleUpdateComponent } from './controller/vehicle-update/vehicle-update.component';
+import { VehicleListComponent } from './controller/vehicle-list/vehicle-list.component';
+import { VehicleDetailComponent } from './controller/vehicle-detail/vehicle-detail.component';
+import { DriverCreateComponent } from './controller/driver-create/driver-create.component';
+import { DriverUpdateComponent } from './controller/driver-update/driver-update.component';
+import { DriverDetailComponent } from './controller/driver-detail/driver-detail.component';
+import { DriverListComponent } from './controller/driver-list/driver-list.component';
+import { CustomerCreateComponent } from './controller/customer-create/customer-create.component';
+import { CustomerUpdateComponent } from './controller/customer-update/customer-update.component';
+import { CustomerListComponent } from './controller/customer-list/customer-list.component';
+import { CustomerDetailComponent } from './controller/customer-detail/customer-detail.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'vehicle', pathMatch: 'full'},

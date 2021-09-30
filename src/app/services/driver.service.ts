@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Driver } from './driver';
+import { Driver } from 'src/app/entity/driver';
 
 @Injectable({
   providedIn: 'root'
