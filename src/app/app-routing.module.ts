@@ -14,9 +14,11 @@ import { CustomerListComponent } from './controller/customer-list/customer-list.
 import { CustomerDetailComponent } from './controller/customer-detail/customer-detail.component';
 import { TransactionListComponent } from './controller/transaction-list/transaction-list.component';
 import { TransactionCreateComponent } from './controller/transaction-create/transaction-create.component';
+import { DashboardComponent } from './controller/dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path:'', redirectTo: 'vehicle', pathMatch: 'full'},
+  {path:'', redirectTo: 'dashboard', pathMatch: 'full'},
+  {path:'dashboard', component: DashboardComponent},
   {path: 'vehicle', component: VehicleListComponent},
   {path: 'driver', component: DriverListComponent},
   {path: 'customer', component: CustomerListComponent},

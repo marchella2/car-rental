@@ -19,6 +19,7 @@ import { CustomerCreateComponent } from './controller/customer-create/customer-c
 import { CustomerUpdateComponent } from './controller/customer-update/customer-update.component';
 import { TransactionCreateComponent } from './controller/transaction-create/transaction-create.component';
 import { TransactionListComponent } from './controller/transaction-list/transaction-list.component';
+import { DashboardComponent } from './controller/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { TransactionListComponent } from './controller/transaction-list/transact
     CustomerCreateComponent,
     CustomerUpdateComponent,
     TransactionCreateComponent,
-    TransactionListComponent
+    TransactionListComponent,
+    DashboardComponent
    
    
   ],
