@@ -12,9 +12,11 @@ import { CustomerCreateComponent } from './customer-create/customer-create.compo
 import { CustomerUpdateComponent } from './customer-update/customer-update.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  {path:'', redirectTo: 'vehicle', pathMatch: 'full'},
+  {path:'', redirectTo: 'dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component:DashboardComponent},
   {path: 'vehicle', component: VehicleListComponent},
   {path: 'driver', component: DriverListComponent},
   {path: 'customer', component: CustomerListComponent},

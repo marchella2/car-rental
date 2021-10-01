@@ -26,7 +26,7 @@
   <hr>
   <div class="sidenav-content">
       <div class="sidenav-menu-heading"></div>
-      <a class="nav-link" href="#">Dashboard</a>
+      <a routerLink="dashboard" class="nav-link" href="dashboard.component.html">Dashboard</a>
       <hr>
       <div class="sidenav-menu-heading, text-white-50" style="padding-left:15px; padding-bottom:5px;"><small>Transaction</small></div>
       <a class="nav-link" href="#">Rental</a>
@@ -45,11 +45,7 @@
   <br>
   <h2 style="text-align: center;">{{ title }}</h2>
   <hr/>
-    <div class="card">
-      <div class="card-body">
         <router-outlet></router-outlet>
-      </div>
-    </div>
 </div>
 
 <footer class="footer">
