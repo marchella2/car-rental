@@ -12,15 +12,15 @@ export class TransactionService {
   constructor(private http: HttpClient) { }
 
   getTransaction():Observable<any>{
-    return this.http.get(`${this.baseUrl}/transaction/show`);
+    return this.http.get(`${this.baseUrl}/transaction/get`);
   }
 
   getVehicle():Observable<any>{
-    return this.http.get(`${this.baseUrl}/transaction/vhc`);
+    return this.http.get(`${this.baseUrl}/transaction/getvehicle`);
   }
 
   getDriver():Observable<any>{
-    return this.http.get(`${this.baseUrl}/transaction/drv`);
+    return this.http.get(`${this.baseUrl}/transaction/getdriver`);
   }
 
   createTransaction(transaction: Transaction):Observable<any>{

@@ -20,7 +20,7 @@ export class TransactionListComponent implements OnInit {
   }
 
   goToCreate(){
-    this.router.navigate(['transactionCreate']);
+    this.router.navigate(['addTransaction']);
   }
 
   finish(id:string){

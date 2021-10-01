@@ -12,15 +12,19 @@ import { CustomerCreateComponent } from './controller/customer-create/customer-c
 import { CustomerUpdateComponent } from './controller/customer-update/customer-update.component';
 import { CustomerListComponent } from './controller/customer-list/customer-list.component';
 import { CustomerDetailComponent } from './controller/customer-detail/customer-detail.component';
+import { TransactionListComponent } from './controller/transaction-list/transaction-list.component';
+import { TransactionCreateComponent } from './controller/transaction-create/transaction-create.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'vehicle', pathMatch: 'full'},
   {path: 'vehicle', component: VehicleListComponent},
   {path: 'driver', component: DriverListComponent},
   {path: 'customer', component: CustomerListComponent},
+  {path: 'transaction', component: TransactionListComponent},
   {path: 'addVehicle', component: VehicleCreateComponent},
   {path: 'addDriver', component: DriverCreateComponent},
   {path: 'addCustomer', component:CustomerCreateComponent},
+  {path: 'addTransaction', component: TransactionCreateComponent},
   {path: 'updateVehicle/:id', component: VehicleUpdateComponent},
   {path: 'detailVehicle/:id', component: VehicleDetailComponent},
   {path: 'updateDriver/:id', component: DriverUpdateComponent},

@@ -51,10 +51,10 @@ export class TransactionCreateComponent implements OnInit {
     );
   }
 
-  getVehicle(){
+  public getVehicle(){
     this.transactionservice.getVehicle().subscribe(
       data=>{
-        this.customer = data;
+        this.vehicle = data;
       },
       (err: HttpErrorResponse)=>{
         console.log(err.message);
