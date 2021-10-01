@@ -7,7 +7,7 @@
         </div>
         <div class="form-group">
             <label>Number : </label>
-            <input type="text" class="form-control" id="vhcNumber" required [(ngModel)]="vhc.vhcNumber" name="vhcNumber">
+            <input type="number" class="form-control" id="vhcNumber" required [(ngModel)]="vhc.vhcNumber" name="vhcNumber">
         </div>
         <div class="form-group">
             <label>Model : </label>
@@ -18,10 +18,11 @@
         </div>
         <div class="form-group">
             <label>Price : </label>
-            <input type="text" class="form-control" id="price" required [(ngModel)]="vhc.vhcPrice" name="price">
+            <input type="number" class="form-control" id="price" required [(ngModel)]="vhc.vhcPrice" name="price">
         </div>
         <br/>
         <button type="sumbit" class="btn btn-success">Save</button>
+        <button (click)="back()" class="btn btn-secondary">Back</button>
     </form>
 </div>
 

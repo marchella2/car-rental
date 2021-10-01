@@ -24,7 +24,7 @@ export class TransactionService {
   }
 
   createTransaction(transaction: Transaction):Observable<any>{
-    return this. http.post(`${this.baseUrl}/transaction/save`, transaction);
+    return this. http.post(`${this.baseUrl}/transaction/create`, transaction);
   }
 
   finishTransaction(id:string):Observable<any>{
