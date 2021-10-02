@@ -1,0 +1,43 @@
+<div class="panel-panel-primary">
+    <div class="panel-heading">
+        <div class="heading-title">
+            <h2>Transaction</h2>
+        </div>
+        <div style="text-align:right;">
+            <button (click)="goToCreate()" class="btn btn-primary pull-right" type="button">New Transaction</button>
+        </div>
+    </div>
+    
+    <br>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Vehicle</th>
+                    <th>Driver Name</th>
+                    <th>Date Rent</th>
+                    <th>Date Return</th>
+                    <th>Status</th>
+                    <th>Total Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of transaction | async">
+                    <td>{{ t.fullName }}</td>
+                    <td>{{ t.vhcModel +"&nbsp;&nbsp;"+ t.vhcName }}</td>
+                    <td>{{ t.driverName }}</td>
+                    <td>{{ t.dateRent }}</td>
+                    <td>{{ t.dateReturn }}</td>
+                    <td>{{ t.status }}</td>
+                    <td>{{ t.totalPrice }}</td>
+                    <td>
+                        <button (click)="finish(t.id)" class="btn btn-info" style="margin-right: 10px;">Finish</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
