@@ -1,7 +1,7 @@
 export class Customer {
     id: string;
     fullName: string;
-    nik: string;
+    nik: number;
     gender: string;
     phoneNumber: string;
     address: string;

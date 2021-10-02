@@ -20,12 +20,22 @@ export class DriverUpdateComponent implements OnInit {
   }
 
   updateDriver(){
-    this.ds.updateDriver(this.driver).subscribe(
-      data=>{
-        console.log(data);
-        this.back();
-      }, error=>console.log(error)
-    );
+    if (this.driver.nik == null){
+      alert("NIK harus diisi");
+    } else if (isNaN(this.driver.nik)){
+      alert("NIK harus diisi dengan angka");
+    } else if (this.driver.driverName == null || this.driver.driverName==""){
+      alert("Nama harus diisi");
+    } else if (this.driver.driverPhone == null || this.driver.driverPhone==""){
+      alert("Nomor telepon harus diisi");
+    } else {
+      this.ds.updateDriver(this.driver).subscribe(
+        data=>{
+          console.log(data);
+          this.back();
+        }, error=>console.log(error)
+      );
+    }
   }
 
   submit(){

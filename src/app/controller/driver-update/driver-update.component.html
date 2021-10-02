@@ -3,7 +3,7 @@
   <form (ngSubmit)="submit()">
     <div class="form-group">
         <label>NIK : </label>
-        <input type="text" class="form-control" name="nik" required [(ngModel)]="driver.nik">
+        <input type="text" maxlength="16" class="form-control" name="nik" required [(ngModel)]="driver.nik">
       </div>
     <div class="form-group">
       <label>Name : </label>
@@ -11,10 +11,7 @@
     </div>
     <div class="form-group">
       <label>Phone Number : </label>
-      <input type="text" class="form-control"  name="driverPhone" required [(ngModel)]="driver.driverPhone" disabled>
-    </div>
-    <div class="form-group">
-      <input type="hidden" value="true" class="form-control" id="driverStatus" required [(ngModel)]="driver.driverStatus" name="driverStatus">
+      <input type="text" maxlength="16" class="form-control"  name="driverPhone" required [(ngModel)]="driver.driverPhone">
     </div>
     <br/>
     <button  type="submit" class="btn btn-success">Submit</button>

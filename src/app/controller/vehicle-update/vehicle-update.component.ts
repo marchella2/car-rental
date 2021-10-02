@@ -22,12 +22,18 @@ export class VehicleUpdateComponent implements OnInit {
 
   updateVehicle()
   {
-    this.vehicleService.updateVehicle(this.vehicle).subscribe(
-      data=>{
-        console.log(data);
-        this.back();
-      }, error=>console.log(error)
-    );
+    if(this.vehicle.vhcName == null || this.vehicle.vhcName == ""){
+      alert("Nama tidak boleh kosong");
+    } else if(this.vehicle.vhcModel == null || this.vehicle.vhcModel == "") {
+      alert("Model kendaraan tidak boleh kosong");
+    } else {
+      this.vehicleService.updateVehicle(this.vehicle).subscribe(
+        data=>{
+          console.log(data);
+          this.back();
+        }, error=>console.log(error)
+      );
+    }
   }
 
   submit(){

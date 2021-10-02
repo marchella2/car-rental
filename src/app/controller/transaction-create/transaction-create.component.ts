@@ -51,7 +51,7 @@ export class TransactionCreateComponent implements OnInit {
     );
   }
 
-  getVehicle(){
+  public getVehicle(){
     this.transactionservice.getVehicle().subscribe(
       data=>{
         this.vehicle = data;
@@ -68,6 +68,13 @@ export class TransactionCreateComponent implements OnInit {
   }
 
   save(){
+   if(this.transaction.custId == null || this.transaction.custId == ""){
+     alert("Customer harus dipilih");
+   } else if (this.transaction.vehicleId == null || this.transaction.vehicleId == ""){
+     alert("Vehicle tidak boleh kosong"); 
+   } else if (this.transaction.dateReturn == null) {
+     alert("Tanggal harus diisi");
+   }else {
     this.transactionservice.createTransaction(this.transaction).subscribe(
       data=>{
         this.transaction = data;
@@ -78,6 +85,7 @@ export class TransactionCreateComponent implements OnInit {
         console.log(err.message);
       }
     );
+   }
   }
 
   submit(){

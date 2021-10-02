@@ -40,6 +40,8 @@ import { TransactionListComponent } from './controller/transaction-list/transact
     DashboardComponent,
     TransactionCreateComponent,
     TransactionListComponent,
+    DashboardComponent
+   
    
   ],
   imports: [
