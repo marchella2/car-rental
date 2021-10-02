@@ -1,8 +1,8 @@
 package com.example.carrental.controllers;
 
+import com.example.carrental.models.DTO.TransactionReport;
 import com.example.carrental.models.Driver;
 import com.example.carrental.models.RentalTrans;
-import com.example.carrental.models.Temporary.RentalTransaction;
 import com.example.carrental.models.Vehicle;
 import com.example.carrental.services.RentalService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class RentalController {
     }
 
     @GetMapping("/get")
-    public ResponseEntity<List<RentalTransaction>> showTransaction(){
+    public ResponseEntity<List<TransactionReport>> showTransaction(){
         return new ResponseEntity<>(rentalService.showTransaction(), HttpStatus.OK);
     }
 

@@ -1,9 +1,11 @@
 package com.example.carrental.services;
 
+import com.example.carrental.models.Customer;
+import com.example.carrental.models.DTO.TransactionReport;
 import com.example.carrental.models.Driver;
 import com.example.carrental.models.RentalTrans;
-import com.example.carrental.models.Temporary.RentalTransaction;
 import com.example.carrental.models.Vehicle;
+import com.example.carrental.repositories.CustomerRepository;
 import com.example.carrental.repositories.DriverRepository;
 import com.example.carrental.repositories.RentalRepository;
 import com.example.carrental.repositories.VehicleRepository;
@@ -12,10 +14,14 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class RentalService {
+
+    @Autowired
+    private CustomerRepository customerRepository;
 
     @Autowired
     private RentalRepository rentalRepository;
@@ -27,7 +33,7 @@ public class RentalService {
     private DriverRepository driverRepository;
 
 
-    public List<RentalTrans> createTransaction (RentalTrans rentalTrans){
+    public List<RentalTrans> createTransaction(RentalTrans rentalTrans) {
         Vehicle vehicle = vehicleRepository.findById(rentalTrans.getVehicleId()).orElse(null);
 
         // set date rent, counting days, counting between days and vehicle price
@@ -38,9 +44,9 @@ public class RentalService {
         rentalTrans.setRentStatus(true);
 
         // gives condition if rents using driver
-        if(rentalTrans.getDriverId() != null) {
+        if (rentalTrans.getDriverId() != null) {
             Driver driver = driverRepository.findById(rentalTrans.getDriverId()).orElse(null);
-            Long totalPrice = rentalTrans.getTotalPrice() + (totalDays*50000);
+            Long totalPrice = rentalTrans.getTotalPrice() + (totalDays * 50000);
             rentalTrans.setTotalPrice(totalPrice);
             driver.setDriverStatus(false);
             driverRepository.save(driver);
@@ -55,22 +61,18 @@ public class RentalService {
         return rentalRepository.findAll();
     }
 
-    public List<RentalTransaction> showTransaction(){
-        return rentalRepository.showAllTransaction();
-    }
-
     // set for list active vehicle( true condition )
-    public List<Vehicle> showActiveVehicle(){
+    public List<Vehicle> showActiveVehicle() {
         return vehicleRepository.findAllByVhcStatus(true);
     }
 
     // set for list active driver
-    public List<Driver> showActiveDriver(){
+    public List<Driver> showActiveDriver() {
         return driverRepository.findAllByDriverStatus(true);
     }
 
     // set for finish transaction
-    public void finishTransaction(String id){
+    public void finishTransaction(String id) {
         RentalTrans rentalTrans = rentalRepository.findById(id).orElse(null);
         rentalTrans.setStatus("Finished"); // set status if condition rent was finish
         rentalTrans.setRentStatus(false);
@@ -85,5 +87,45 @@ public class RentalService {
         driverRepository.save(driver);
 
     }
+
+    public List<TransactionReport> showTransaction() {
+        List<Customer> customerList = customerRepository.findAll();
+        List<Vehicle> vehicleList = vehicleRepository.findAll();
+        List<Driver> driverList = driverRepository.findAll();
+        List<RentalTrans> rentalTransList = rentalRepository.findAll();
+        List<TransactionReport> reportList = new ArrayList<>();
+
+        for (RentalTrans rental : rentalTransList) {
+            TransactionReport report = new TransactionReport();
+            report.setDateRent(rental.getDateRent());
+            report.setDateReturn(rental.getDateReturn());
+            report.setStatus(rental.getStatus());
+            report.setId(rental.getId());
+            report.setTotalPrice(rental.getTotalPrice());
+            for (Customer customer : customerList) {
+                if (rental.getCustId().equals(customer.getId())) {
+                    report.setFullName(customer.getFullName());
+                }
+            }
+            for (Vehicle vehicle : vehicleList) {
+                if (rental.getVehicleId().equals(vehicle.getId())) {
+                    report.setVhcModel(vehicle.getVhcModel());
+                    report.setVhcName(vehicle.getVhcName());
+                }
+            }
+            if(rental.getDriverId()!=null){
+                for(Driver driver : driverList){
+                    if(rental.getDriverId().equals(driver.getId())){
+                        report.setDriverName(driver.getDriverName());
+                    }
+                }
+            }
+            reportList.add(report);
+        }
+        return reportList;
+    }
+
+
+
 
 }
