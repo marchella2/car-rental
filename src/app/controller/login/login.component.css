@@ -5,7 +5,7 @@ body {
 }
 
 .login__body {
-  min-height: 100vh;
+  min-height: 50h;
 }
 
 .login__image {
@@ -15,7 +15,7 @@ body {
 
 .login__container,
 .login__row {
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .login__card {

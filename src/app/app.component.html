@@ -1,16 +1,23 @@
 <nav class="navbar navbar-expand navbar-dark" *ngIf="authenticationService.isAuthenticated">
 <div class="sidenav-menu">
-  <img src="assets/image/car-rental-logo.png" style="margin-left: 60px;padding-bottom: 5px;"><br>
-  <a class="navbar-brand ps-2" href="#" style="margin-left: 5px;">CAR RENTAL</a>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand ps-2" href="#">
+        <img src="assets/image/car-rental-logo.png" style="margin-left: 80px;padding-bottom: 5px;"><br>
+        <a class="navbar-brand ps-2" href="#" style="margin-left: 30px;">CAR RENTAL</a>
+      </a>
+    </div>
+  </nav>
+  
   <hr>
   <div class="sidenav-content">
       <div class="sidenav-menu-heading"></div>
       <a routerLink="dashboard" class="nav-link" href="dashboard.component.html">Dashboard</a>
       <hr>
-      <div class="sidenav-menu-heading, text-white-50" style="padding-left:15px; padding-bottom:5px;"><small>Transaction</small></div>
+      <div class="sidenav-menu-heading, text-white-80" style="padding-left:20px; padding-bottom:5px;"><small>Transaction</small></div>
       <a routerLink="transaction" class="nav-link" href="#">Rental</a>
       <hr>
-      <div class="sidenav-menu-heading, text-white-50" style="padding-left:15px;padding-bottom:5px;"><small>Data Master</small></div>
+      <div class="sidenav-menu-heading, text-white-80" style="padding-left:20px;padding-bottom:5px;"><small>Data Master</small></div>
       <a routerLink="vehicle" class="nav-link" href="#">Car Section</a>
       <a routerLink="driver" class="nav-link" href="#">Driver Section</a>
       <a routerLink="customer" class="nav-link" href="#">Customer Section</a>
