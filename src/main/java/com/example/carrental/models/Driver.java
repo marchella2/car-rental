@@ -10,7 +10,7 @@ import java.util.UUID;
 public class Driver {
     @Id
     private String id;
-    private String nik;
+    private Long nik;
     private String driverName;
     private String driverPhone;
     private Boolean driverStatus;
@@ -26,11 +26,11 @@ public class Driver {
         this.id = id;
     }
 
-    public String getNik() {
+    public Long getNik() {
         return nik;
     }
 
-    public void setNik(String nik) {
+    public void setNik(Long nik) {
         this.nik = nik;
     }
 

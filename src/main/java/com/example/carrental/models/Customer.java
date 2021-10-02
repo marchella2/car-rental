@@ -9,7 +9,7 @@ public class Customer {
     @Id
     private String id;
     private String fullName;
-    private String nik;
+    private Long nik;
     private String gender;
     private String phoneNumber;
     private String address;
@@ -33,11 +33,11 @@ public class Customer {
         this.fullName = fullName;
     }
 
-    public String getNik() {
+    public Long getNik() {
         return nik;
     }
 
-    public void setNik(String nik) {
+    public void setNik(Long nik) {
         this.nik = nik;
     }
 
