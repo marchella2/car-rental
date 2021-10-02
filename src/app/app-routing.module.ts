@@ -16,24 +16,27 @@ import { CustomerUpdateComponent } from './controller/customer-update/customer-u
 import { TransactionCreateComponent } from './controller/transaction-create/transaction-create.component';
 import { TransactionListComponent } from './controller/transaction-list/transaction-list.component';
 import { DashboardComponent } from './controller/dashboard/dashboard.component';
+import { LoginComponent } from './controller/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  {path:'', redirectTo: 'dashboard', pathMatch: 'full'},
-  {path: 'dashboard', component:DashboardComponent},
-  {path: 'vehicle', component: VehicleListComponent},
-  {path: 'driver', component: DriverListComponent},
-  {path: 'customer', component: CustomerListComponent},
-  {path: 'transaction', component: TransactionListComponent},
-  {path: 'addVehicle', component: VehicleCreateComponent},
-  {path: 'addDriver', component: DriverCreateComponent},
-  {path: 'addCustomer', component:CustomerCreateComponent},
-  {path: 'addTransaction', component: TransactionCreateComponent},
-  {path: 'updateVehicle/:id', component: VehicleUpdateComponent},
-  {path: 'detailVehicle/:id', component: VehicleDetailComponent},
-  {path: 'updateDriver/:id', component: DriverUpdateComponent},
-  {path: 'detailDriver/:id', component: DriverDetailComponent},
-  {path: 'updateCustomer/:id', component:CustomerUpdateComponent},
-  {path: 'detailCustomer/:id', component: CustomerDetailComponent},
+  {path:'', redirectTo: 'login', pathMatch: 'full'},
+  {path:'login', component: LoginComponent},
+  {path: 'dashboard', component:DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'vehicle', component: VehicleListComponent, canActivate: [AuthGuard]},
+  {path: 'driver', component: DriverListComponent, canActivate: [AuthGuard]},
+  {path: 'customer', component: CustomerListComponent, canActivate: [AuthGuard]},
+  {path: 'transaction', component: TransactionListComponent, canActivate: [AuthGuard]},
+  {path: 'addVehicle', component: VehicleCreateComponent, canActivate: [AuthGuard]},
+  {path: 'addDriver', component: DriverCreateComponent, canActivate: [AuthGuard]},
+  {path: 'addCustomer', component:CustomerCreateComponent, canActivate: [AuthGuard]},
+  {path: 'addTransaction', component: TransactionCreateComponent, canActivate: [AuthGuard]},
+  {path: 'updateVehicle/:id', component: VehicleUpdateComponent, canActivate: [AuthGuard]},
+  {path: 'detailVehicle/:id', component: VehicleDetailComponent, canActivate: [AuthGuard]},
+  {path: 'updateDriver/:id', component: DriverUpdateComponent, canActivate: [AuthGuard]},
+  {path: 'detailDriver/:id', component: DriverDetailComponent, canActivate: [AuthGuard]},
+  {path: 'updateCustomer/:id', component:CustomerUpdateComponent, canActivate: [AuthGuard]},
+  {path: 'detailCustomer/:id', component: CustomerDetailComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-dark">
+<nav class="navbar navbar-expand navbar-dark" *ngIf="authenticationService.isAuthenticated">
 <div class="sidenav-menu">
   <img src="assets/image/car-rental-logo.png" style="margin-left: 60px;padding-bottom: 5px;"><br>
   <a class="navbar-brand ps-2" href="#" style="margin-left: 5px;">CAR RENTAL</a>
@@ -15,6 +15,7 @@
       <a routerLink="driver" class="nav-link" href="#">Driver Section</a>
       <a routerLink="customer" class="nav-link" href="#">Customer Section</a>
       <hr>
+      <a (click)="logout()" href="#" class="nav-link">Logout</a>
   </div>
 </div>
 </nav>
